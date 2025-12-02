@@ -27,7 +27,6 @@ footer {
     height: 60px;
     background-color: #333;
     display: flex;
-
     div {
         width: 25%;
         height: 100%;
@@ -40,9 +39,11 @@ footer {
         color: #fff;
         font-size: 12px;
         font-weight: bold;
-        img {
-            width: 30px;
-            height: 30px;
+        span {
+            margin-bottom: 3px;
         }
+    }
+    .footer_option {
+        border: none;
     }
 }
