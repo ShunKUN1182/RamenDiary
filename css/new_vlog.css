@@ -40,3 +40,23 @@ main {
         color: #000;
     }
 }
+
+.btn_data {
+    width: 200px;
+    height: 40px;
+    background-color: #b1e9ff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+    box-shadow: 0 1px 1px #000;
+    transition: 1s;
+    &:hover {
+        background-color: #dbf5ff;
+    }
+    button {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
