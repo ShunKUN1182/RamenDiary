@@ -39,6 +39,23 @@ main {
         border: #666 2px solid;
         color: #000;
     }
+    .data_frame {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80vw;
+        height: 50px;
+        border: #666 2px solid;
+        p {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        select {
+            margin-right: 10px;
+            color: #00a1f8;
+        }
+    }
 }
 
 .btn_data {
@@ -51,7 +68,7 @@ main {
     align-items: center;
     margin-top: 22px;
     box-shadow: 0 1px 1px #000;
-    transition: 1s;
+    transition: 0.5s;
     &:hover {
         background-color: #dbf5ff;
     }
