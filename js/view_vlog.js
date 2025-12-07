@@ -26,4 +26,14 @@ async function loadData() {
     }
 }
 
+async function inputTotalPrice() {
+    const { data, error } = await supabase.from("ramen_data").select("ramen_price");
+    const prices = data.map((e) => e.ramen_price);
+    const totalPrice = prices.reduce((prev, current) => prev + current);
+    console.log(totalPrice);
+    inputPrice.textContent = `${totalPrice}円`;
+}
+
+inputTotalPrice();
+
 loadData();
