@@ -15,14 +15,29 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
+    position: relative;
     .material-symbols-outlined {
         font-size: 80px;
         color: #fff;
     }
-    p {
+    .custom-upload {
         font-size: 16px;
         color: #fff;
         font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        width: 250px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 250px;
+    }
+
+    .hidden {
+        display: none;
     }
 }
 
