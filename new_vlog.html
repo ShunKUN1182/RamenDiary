@@ -29,11 +29,11 @@
                 <p>写真を追加する</p>
             </div>
             <div class="input_data">
-                <input type="text" placeholder="行ったラーメンの名前" />
-                <input type="text" placeholder="食べたラーメンの値段を入力" />
+                <input type="text" id="text_data" placeholder="行ったラーメンの名前" />
+                <input type="number" id="number_data" placeholder="食べたラーメンの値段を入力" />
                 <div class="data_frame">
                     <p>食べた味</p>
-                    <select>
+                    <select id="ramen_taste">
                         <option>しょうゆ</option>
                         <option>塩</option>
                         <option>とんこつ</option>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="btn_data">
-                <button type="button">日記を保存</button>
+                <button type="button" id="submit_btn">日記を保存</button>
             </div>
         </main>
 
