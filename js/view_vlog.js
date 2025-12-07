@@ -4,6 +4,7 @@ const supabaseKey =
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 const ramenView = document.querySelector(".ramen_view");
+const inputPrice = document.querySelector("#total_price");
 
 async function loadData() {
     const { data, error } = await supabase.from("ramen_data").select("*");
@@ -17,7 +18,7 @@ async function loadData() {
                         <img src="${data[i].image_url}" alt="" width="100" height="100"/>
                         <div>
                             <h2>${data[i].ramen_name}</h2>
-                            <h3>評価：${data[i].ramen_judge}</h3>
+                            <h3>評価：${data[i].ramen_judge}.0</h3>
                             <h3>${data[i].ramen_price}円分食べました</h3>
                         </div>
                     </div>
