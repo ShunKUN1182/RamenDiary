@@ -17,11 +17,20 @@ const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 // loadData();
 
 async function insertTest() {
-    const { error } = await supabase.from("ramen_data").insert({ ramen_name: textData.value });
-    // console.log("無事成功しました");
-    // console.log(error);
+    const { error } = await supabase.from("ramen_data").insert({
+        ramen_name: textData.value,
+        ramen_price: numberData.value,
+        ramen_taste: ramenTaste.value,
+        ramen_judge: ramenJudge.value,
+    });
+    if (error) {
+        alert("error");
+    } else {
+        alert("データ追加成功");
+    }
 }
 
 submitBtn.addEventListener("click", () => {
     insertTest();
+    // console.log(ramenTaste.value, ramenJudge.value);
 });
