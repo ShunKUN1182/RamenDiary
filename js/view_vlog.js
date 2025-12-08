@@ -10,6 +10,11 @@ async function loadData() {
     const { data, error } = await supabase.from("ramen_data").select("*");
     console.log("data:", data);
     console.log("error:", error);
+    // console.log(data[1].created_at);
+    let timeData = data[1].created_at.split("T");
+    timeData = timeData[0].split("-");
+    console.log(timeData);
+
     for (let i = 0; i < data.length; i++) {
         ramenView.insertAdjacentHTML(
             "afterbegin",
@@ -20,6 +25,7 @@ async function loadData() {
                             <h2>${data[i].ramen_name}</h2>
                             <h3>評価：${data[i].ramen_judge}.0</h3>
                             <h3>${data[i].ramen_price}円分食べました</h3>
+                            <h4>${timeData[0]}年${timeData[1]}月${timeData[2]}日</h4>
                         </div>
                     </div>
                   `

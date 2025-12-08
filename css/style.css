@@ -33,12 +33,27 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: -10px;
+    gap: -100px;
     h2 {
-        font-size: 14px;
+        font-size: 12px;
     }
     h3 {
-        font-size: 36px;
+        font-size: 22px;
+        text-align: left;
+    }
+    .teast_graph {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 90px;
+    }
+    #tasteChart {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .top_price {
+        position: absolute;
+        top: 250px;
     }
 }
 
