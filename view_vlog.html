@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/view_vlog.css" />
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="js/view_vlog.js" defer></script>
+        <script src="js/graph.js" defer></script>
     </head>
     <body>
         <header>
@@ -17,9 +19,15 @@
         </header>
         <main>
             <div class="top_data">
-                <h2>今までラーメンに使った総額</h2>
-                <h3 id="total_price">?????</h3>
+                <div class="teast_graph">
+                    <canvas id="tasteChart" class="chart"></canvas>
+                </div>
+                <div class="top_price">
+                    <h2>今までラーメンに使った総額</h2>
+                    <h3 id="total_price">?????</h3>
+                </div>
             </div>
+
             <div class="data_view">
                 <!-- <div class="data_date">
                     <h2>2025年 11月</h2>
