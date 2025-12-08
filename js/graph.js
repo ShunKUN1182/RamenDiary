@@ -33,7 +33,7 @@ async function createTasteChart() {
                         "#83f7ffff",
                         "#ff78d6ff",
                         "#ffc227ff",
-                        "#fd79a8",
+                        "#0404c0ff",
                     ],
                 },
             ],
