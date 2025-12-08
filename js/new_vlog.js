@@ -5,6 +5,7 @@ const ramenJudge = document.querySelector("#ramen_judge");
 const submitBtn = document.querySelector("#submit_btn");
 const ramenImage = document.querySelector("#ramen_image");
 const bucketName = "ramen_images";
+const addPhoto = document.querySelector("#add_photo");
 
 const supabaseUrl = "https://gcflelpasndsydtugmja.supabase.co";
 const supabaseKey =
@@ -18,19 +19,32 @@ const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 // }
 // loadData();
 
-async function insertTest() {
-    const { error } = await supabase.from("ramen_data").insert({
-        ramen_name: textData.value,
-        ramen_price: numberData.value,
-        ramen_taste: ramenTaste.value,
-        ramen_judge: ramenJudge.value,
-    });
-    if (error) {
-        alert("error");
-    } else {
-        alert("データ追加成功");
-    }
-}
+ramenImage.addEventListener("change", () => {
+    const file = ramenImage.files[0];
+    console.dir(addPhoto);
+    const imageURL = URL.createObjectURL(file);
+
+    addPhoto.innerHTML = `
+                        <img src="${imageURL}"
+                            alt="画像追加されました"
+                            width="250"
+                            height="150"
+                        />`;
+});
+
+// async function insertTest() {
+//     const { error } = await supabase.from("ramen_data").insert({
+//         ramen_name: textData.value,
+//         ramen_price: numberData.value,
+//         ramen_taste: ramenTaste.value,
+//         ramen_judge: ramenJudge.value,
+//     });
+//     if (error) {
+//         alert("error");
+//     } else {
+//         alert("データ追加成功");
+//     }
+// }
 
 submitBtn.addEventListener("click", async () => {
     let file = ramenImage.files[0];
