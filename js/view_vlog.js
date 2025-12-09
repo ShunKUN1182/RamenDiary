@@ -11,11 +11,11 @@ async function loadData() {
     console.log("data:", data);
     console.log("error:", error);
     // console.log(data[1].created_at);
-    let timeData = data[1].created_at.split("T");
-    timeData = timeData[0].split("-");
-    console.log(timeData);
 
     for (let i = 0; i < data.length; i++) {
+        let timeData = data[i].created_at.split("T");
+        timeData = timeData[0].split("-");
+        console.log(timeData);
         ramenView.insertAdjacentHTML(
             "afterbegin",
             `
