@@ -39,3 +39,36 @@
         }
     }
 }
+
+.add_pictures {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        border-radius: 10px;
+        width: 250px;
+        height: 150px;
+        background-color: var(--blockColor);
+        position: relative;
+        display: none;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 110px;
+        color: var(--whiteColor);
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        width: 250px;
+        height: 150px;
+        background-color: var(--blockColor);
+        img {
+            margin-top: 10px;
+        }
+    }
+}
