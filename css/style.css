@@ -1,5 +1,17 @@
 body {
-    background-color: #efefef;
+    background-color: var(--backgroundColor);
+}
+
+:root {
+    --whiteColor: #fefefe;
+    --cardBackground: #fff;
+    --backgroundColor: #fffaf0;
+    --gray: #c3c7bf;
+    --borderGray: #9b9b9b;
+    --blockColor: #272727;
+    --baseColor: #992e36;
+    --mainColor: #bf3944;
+    --accentColor: #a07e37;
 }
 
 header {
@@ -7,14 +19,15 @@ header {
     z-index: 1000000;
     top: 0;
     width: 100vw;
-    height: 50px;
-    background-color: #333;
+    height: 80px;
+    background-color: var(--whiteColor);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: var(--borderGray) 2px solid;
     h1 {
-        width: 100px;
-        height: 30px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
