@@ -1,4 +1,4 @@
-.main_btns {
+/* .main_btns {
     margin: 40px 30px;
     display: flex;
     flex-direction: column;
@@ -38,10 +38,14 @@
             }
         }
     }
-}
+} */
 
-.add_pictures {
+/* add_ramen_data {
+    display: flex;
+    flex-direction: column;
     margin-top: 110px;
+} */
+.add_pictures {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,5 +74,22 @@
         img {
             margin-top: 10px;
         }
+    }
+}
+
+.shopBox {
+    width: 100vw;
+    height: 40px;
+    margin-top: 290px;
+    background-color: var(--whiteColor);
+    border: 1px solid var(--borderGray);
+    border-left: none;
+    border-right: none;
+    input {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        height: 100%;
+        width: 100%;
     }
 }
