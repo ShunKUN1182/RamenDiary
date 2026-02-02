@@ -1,0 +1,30 @@
+.total_price {
+    margin: 0 20px;
+    height: 160px;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(184, 51, 74, 1),
+        rgba(184, 51, 74, 0.8)
+    );
+    border-radius: 16px;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 24px;
+    color: var(--whiteColor);
+    p {
+        font-weight: normal;
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+    h3 {
+        font-weight: 50;
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+}
