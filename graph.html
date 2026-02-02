@@ -22,8 +22,8 @@
         <link rel="stylesheet" href="css/ress.css" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/new_vlog.css" />
-        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-        <script src="js/new_vlog.js" defer></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+        <script src="js/new_vlog.js" defer></script> -->
     </head>
     <body>
         <header>
@@ -31,49 +31,13 @@
         </header>
 
         <main>
-            <div class="add_img">
-                <span class="material-symbols-outlined"> image </span>
-                <label for="ramen_image" class="custom-upload">
-                    <span id="add_photo">
-                        画像を追加する
-                        <!-- <img
-                            src="images/ramen_img.png"
-                            alt="kari"
-                            width="250"
-                            height="150"
-                        />  -->
-                    </span>
-                </label>
-                <input type="file" id="ramen_image" class="hidden" accept="image/*" />
-            </div>
-            <div class="input_data">
-                <input type="text" id="text_data" placeholder="行ったラーメンの名前" />
-                <input type="number" id="number_data" placeholder="食べたラーメンの値段を入力" />
-                <div class="data_frame">
-                    <p>食べた味</p>
-                    <select id="ramen_taste">
-                        <option>しょうゆ</option>
-                        <option>塩</option>
-                        <option>とんこつ</option>
-                        <option>味噌</option>
-                        <option>つけめん</option>
-                    </select>
-                </div>
-                <div class="data_frame">
-                    <p>評価</p>
-                    <select id="ramen_judge">
-                        <option>5.0</option>
-                        <option>4.0</option>
-                        <option>3.0</option>
-                        <option>2.0</option>
-                        <option>1.0</option>
-                    </select>
-                </div>
-            </div>
-            <div class="btn_data">
-                <button type="button" id="submit_btn">日記を保存</button>
+            <div class="total_price">
+                <p>合計金額</p>
+                <h2>¥9,460</h2>
+                <h3>8杯のラーメンを記録</h3>
             </div>
         </main>
+
         <footer>
             <nav>
                 <ul>
