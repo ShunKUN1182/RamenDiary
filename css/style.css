@@ -6,12 +6,12 @@ body {
 :root {
     --whiteColor: #fefefe;
     --cardBackground: #fff;
-    --backgroundColor: #fffaf0;
+    --backgroundColor: #fff4db;
     --gray: #c3c7bf;
     --borderGray: #9b9b9b;
     --blockColor: #272727;
     --baseColor: #992e36;
-    --mainColor: #bf3944;
+    --mainColor: #060202;
     --accentColor: #a07e37;
 }
 
