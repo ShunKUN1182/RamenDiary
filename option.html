@@ -13,12 +13,85 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="css/ress.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/option.css" />
     </head>
     <body>
         <header>
             <h1><img src="images/RamenDiary_logo.png" alt="RamenDiary" /></h1>
         </header>
+        <main class="container">
+            <div class="section-title">アカウント</div>
+            <div class="settings-list">
+                <div class="settings-item">
+                    <div class="item-left">
+                        <i class="fa-solid fa-user item-icon"></i>
+                        <span>プロフィール編集</span>
+                    </div>
+                    <div class="item-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
 
+                <div class="settings-item">
+                    <div class="item-left">
+                        <i class="fa-solid fa-bell item-icon"></i>
+                        <span>通知設定</span>
+                    </div>
+                    <div class="item-right">
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">アプリについて</div>
+            <div class="settings-list">
+                <a href="#" class="settings-item">
+                    <div class="item-left">
+                        <i class="fa-solid fa-file-contract item-icon"></i>
+                        <span>利用規約</span>
+                    </div>
+                    <div class="item-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="settings-item">
+                    <div class="item-left">
+                        <i class="fa-solid fa-shield-halved item-icon"></i>
+                        <span>プライバシーポリシー</span>
+                    </div>
+                    <div class="item-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <div class="settings-item">
+                    <div class="item-left">
+                        <i class="fa-solid fa-circle-info item-icon"></i>
+                        <span>バージョン</span>
+                    </div>
+                    <div class="item-right">
+                        <span class="version-text">v1.0.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">その他</div>
+            <div class="settings-list">
+                <div class="settings-item">
+                    <div class="item-left">
+                        <i
+                            class="fa-solid fa-arrow-right-from-bracket item-icon"
+                            style="color: #b23a48"
+                        ></i>
+                        <span class="logout-text">ログアウト</span>
+                    </div>
+                </div>
+            </div>
+        </main>
         <footer>
             <nav>
                 <ul>
