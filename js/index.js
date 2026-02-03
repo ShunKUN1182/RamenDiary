@@ -11,6 +11,15 @@ const ramenTaste = document.querySelector("#ramenTaste");
 const changePicture = document.querySelector("#changePicture");
 // const ramenJudge = "";
 
+const today = new Date();
+console.log(today);
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, "0");
+const dd = String(today.getDate()).padStart(2, "0");
+console.log(yyyy, mm, dd);
+
+ramenDate.value = `${yyyy}-${mm}-${dd}`;
+
 ramenImage.addEventListener("change", () => {
     const file = ramenImage.files[0];
     const fileName = URL.createObjectURL(file);
