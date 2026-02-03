@@ -7,6 +7,8 @@ const ramenImage = document.querySelector("#addPicture");
 const textData = document.querySelector("#textData");
 const ramenDate = document.querySelector("#ramenDate");
 const ramenPrice = document.querySelector("#ramenPrice");
+const ramenTaste = document.querySelector("#ramenTaste");
+const ramenJudge = "";
 
 async function loadData() {
     const { data, error } = await supabase.from("ramen_data").select("*");
@@ -32,12 +34,13 @@ submitBtn.addEventListener("click", async () => {
     console.log("error:", error);
     const { data: urlData } = supabase.storage.from(bucketName).getPublicUrl(fileName);
     console.log(urlData);
+
     await supabase.from(databaseName).insert({
         image_url: urlData.publicUrl,
         ramen_name: textData.value,
-        ramen_price: ramenPrice,
+        ramen_price: ramenPrice.valueAsNumber,
         ramen_taste: ramenTaste.value,
-        ramen_judge: ramenJudge.value,
+        ramen_date: ramenDate.value,
     });
     if (error) {
         alert("error");
