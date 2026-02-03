@@ -1,8 +1,12 @@
 import { supabase } from "./supabase.js";
 
 const bucketName = "ramen_images";
+const databaseName = "ramen_data";
 const submitBtn = document.querySelector("#submit_btn");
 const ramenImage = document.querySelector("#addPicture");
+const textData = document.querySelector("#textData");
+const ramenDate = document.querySelector("#ramenDate");
+const ramenPrice = document.querySelector("#ramenPrice");
 
 async function loadData() {
     const { data, error } = await supabase.from("ramen_data").select("*");
@@ -28,4 +32,17 @@ submitBtn.addEventListener("click", async () => {
     console.log("error:", error);
     const { data: urlData } = supabase.storage.from(bucketName).getPublicUrl(fileName);
     console.log(urlData);
+    await supabase.from(databaseName).insert({
+        image_url: urlData.publicUrl,
+        ramen_name: textData.value,
+        ramen_price: ramenPrice,
+        ramen_taste: ramenTaste.value,
+        ramen_judge: ramenJudge.value,
+    });
+    if (error) {
+        alert("error");
+    } else {
+        location.reload();
+        alert("データが登録されました！");
+    }
 });
