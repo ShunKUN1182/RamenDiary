@@ -10,26 +10,35 @@
         position: relative;
         display: none;
     }
-    label {
+    div {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 12px;
-        margin-top: 110px;
-        color: var(--whiteColor);
-        position: absolute;
-        top: 0;
-        border-radius: 10px;
-        width: 250px;
-        height: 150px;
-        background-color: var(--blockColor);
-        img {
-            margin-top: 10px;
-        }
-        span {
-            font-weight: 500;
-            font-size: 16px;
+        label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 110px;
+            color: var(--whiteColor);
+            position: absolute;
+            top: 0;
+            border-radius: 10px;
+            width: 250px;
+            height: 150px;
+            background-color: var(--blockColor);
+            img {
+                margin-top: 10px;
+                object-fit: cover;
+                object-position: center;
+                width: 80px;
+                height: 60px;
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+            }
         }
     }
 }

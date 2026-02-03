@@ -8,15 +8,20 @@ const textData = document.querySelector("#textData");
 const ramenDate = document.querySelector("#ramenDate");
 const ramenPrice = document.querySelector("#ramenPrice");
 const ramenTaste = document.querySelector("#ramenTaste");
-const ramenJudge = "";
+const changePicture = document.querySelector("#changePicture");
+// const ramenJudge = "";
 
-async function loadData() {
-    const { data, error } = await supabase.from("ramen_data").select("*");
-    console.log("data:", data);
-    console.log("error:", error);
-}
+ramenImage.addEventListener("change", () => {
+    const file = ramenImage.files[0];
+    const fileName = URL.createObjectURL(file);
 
-loadData();
+    changePicture.innerHTML = `
+                    <label for="addPicture">
+                        <img src="${fileName}" alt="" />
+                        <span>写真が追加されました！</span>
+                    </label>
+    `;
+});
 
 submitBtn.addEventListener("click", async () => {
     let file = ramenImage.files[0];
