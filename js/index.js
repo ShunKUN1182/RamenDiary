@@ -23,4 +23,9 @@ submitBtn.addEventListener("click", async () => {
     const reFile = file.name.split(".").pop();
     const fileName = `${crypto.randomUUID()}.${reFile}`;
     console.log(fileName);
+    const { data, error } = await supabase.storage.from(bucketName).upload(fileName, file);
+    console.log("data:", data);
+    console.log("error:", error);
+    const { data: urlData } = supabase.storage.from(bucketName).getPublicUrl(fileName);
+    console.log(urlData);
 });
