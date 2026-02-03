@@ -5,9 +5,10 @@ async function loadData() {
     console.log("data:", data);
     console.log("error:", error);
     for (let i = 0; i < data.length; i++) {
-        let timeData = data[i].created_at.split("T");
-        timeData = timeData[0].split("-");
-        console.log(timeData);
+        if (data[i].ramen_date) {
+            let timeData = data[i].ramen_date.split("-");
+            console.log(timeData);
+        }
     }
 }
 
