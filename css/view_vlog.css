@@ -53,6 +53,8 @@
             height: 100px;
             object-fit: cover;
             object-position: center;
+            border: solid 4px var(--baseColor);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
         }
         .ramen_data_text {
             height: 100px;

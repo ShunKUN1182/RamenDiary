@@ -28,7 +28,7 @@ async function loadData() {
                             <h4>${timeData[0]}年${timeData[1]}月${timeData[2]}日</h4>
                         </div>
                     </div>
-                  `
+                  `,
         );
     }
 }
