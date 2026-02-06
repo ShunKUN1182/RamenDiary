@@ -31,8 +31,8 @@
 }
 
 .graph_wrap {
-    height: 300px;
-    margin: 20px 20px;
+    /* height: 300px; */
+    margin: 20px 20px 80px;
     background-color: var(--whiteColor);
     border-radius: 10px;
     padding: 20px;
