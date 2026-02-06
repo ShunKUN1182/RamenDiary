@@ -34,8 +34,11 @@
     height: 300px;
     margin: 20px 20px;
     background-color: var(--whiteColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
+    padding: 20px;
+}
+
+.graph_wrap canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
