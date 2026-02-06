@@ -26,52 +26,75 @@ async function totalPrice() {
     priceOutput.innerHTML = totalPrice;
 }
 
-async function tasteGraph() {
-    const { data, error } = await supabase.from("ramen_data").select("ramen_taste");
+totalPrice();
 
-    if (error) {
-        console.log(error);
-        return;
-    }
-
-    // tasteを集計する
-    const tasteCount = {};
-
-    data.forEach((item) => {
-        const taste = item.ramen_taste;
-
-        if (tasteCount[taste]) {
-            tasteCount[taste]++;
-        } else {
-            tasteCount[taste] = 1;
-        }
-    });
-
-    const labels = Object.keys(tasteCount);
-    const values = Object.values(tasteCount);
-
+async function tasteChart() {
     new Chart(ctx, {
-        type: "doughnut", // 円グラフなら "pie" でもOK
+        type: "doughnut",
         data: {
-            labels: labels,
+            labels: ["赤", "緑", "青"],
             datasets: [
                 {
-                    label: "ラーメンの味",
-                    data: values,
-                    borderWidth: 2,
+                    label: "hello",
+                    data: [12, 19, 9],
+                    borderWidth: 1,
                 },
             ],
         },
         options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: "bottom",
+            scales: {
+                y: {
+                    beginAtZero: true,
                 },
             },
         },
     });
 }
 
-totalPrice();
-tasteGraph();
+tasteChart();
+// async function tasteGraph() {
+//     const { data, error } = await supabase.from("ramen_data").select("ramen_taste");
+
+//     if (error) {
+//         console.log(error);
+//         return;
+//     }
+
+//     // tasteを集計する
+//     const tasteCount = {};
+
+//     data.forEach((item) => {
+//         const taste = item.ramen_taste;
+
+//         if (tasteCount[taste]) {
+//             tasteCount[taste]++;
+//         } else {
+//             tasteCount[taste] = 1;
+//         }
+//     });
+
+//     const labels = Object.keys(tasteCount);
+//     const values = Object.values(tasteCount);
+
+//     new Chart(ctx, {
+//         type: "doughnut", // 円グラフなら "pie" でもOK
+//         data: {
+//             labels: labels,
+//             datasets: [
+//                 {
+//                     label: "ラーメンの味",
+//                     data: values,
+//                     borderWidth: 2,
+//                 },
+//             ],
+//         },
+//         options: {
+//             responsive: true,
+//             plugins: {
+//                 legend: {
+//                     position: "bottom",
+//                 },
+//             },
+//         },
+//     });
+// }
