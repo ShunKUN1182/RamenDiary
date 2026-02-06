@@ -32,7 +32,7 @@ async function tasteChart() {
     new Chart(ctx, {
         type: "doughnut",
         data: {
-            labels: ["赤", "緑", "青"],
+            labels: ["うんち", "緑", "青"],
             datasets: [
                 {
                     label: "hello",
