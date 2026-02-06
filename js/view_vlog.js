@@ -9,7 +9,6 @@ async function loadData() {
     for (let i = 0; i < data.length; i++) {
         if (data[i].ramen_date) {
             let timeData = data[i].ramen_date.split("-");
-            // console.log(timeData);
             ramenDatas.insertAdjacentHTML(
                 "beforeend",
                 `
