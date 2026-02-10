@@ -11,6 +11,9 @@
 .ranking_Wrap {
     height: 400px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     .ranking_item {
         display: flex;
         align-items: center;
@@ -20,6 +23,14 @@
         padding: 20px;
         border: 1px solid #9b9b9b;
         border-radius: 10px;
+        .rank {
+            width: 40px;
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
         .ranking_item_texts {
             width: 100%;
             display: flex;
