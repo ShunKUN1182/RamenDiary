@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="css/ress.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/register.css" />
         <!-- <script type="module" src="js/index.js" defer></script> -->
     </head>
     <body>
@@ -22,24 +22,33 @@
         </header>
         <main>
             <div class="headWrap">
-                <h1>ログイン</h1>
+                <h1>新規登録</h1>
             </div>
-            <div class="login_Wrap">
+            <div class="userInfo_Wrap">
+                <div class="userName_Wrap">
+                    <h2>ニックネーム</h2>
+                    <input type="text" id="" placeholder="ニックネームを入力" />
+                </div>
                 <div class="userID_Wrap">
                     <h2>ユーザーID</h2>
-                    <input type="text" id="" placeholder="ユーザーIDを入力" />
+                    <input type="text" id="" placeholder="半角英数字で入力" />
                 </div>
                 <div class="password_Wrap">
                     <h2>パスワード</h2>
-                    <input type="password" id="" placeholder="パスワードを入力" />
+                    <input type="password" id="" placeholder="4文字以上で入力" />
                 </div>
+                <!-- <div class="password_Wrap">
+                    <h2>パスワード (確認)</h2>
+                    <input type="password" id="" placeholder="もう一度入力してください" />
+                </div> -->
+
                 <div class="submit_Btn">
-                    <p><a href="index.html">ログイン</a></p>
+                    <p><a href="login.html">アカウントを作成</a></p>
                 </div>
             </div>
             <div class="newRegistration_Wrap">
-                <p>アカウントをお持ちでない場合</p>
-                <p><a href="register.html">新規登録はこちら</a></p>
+                <p>すでにアカウントをお持ちの方は</p>
+                <p><a href="login.html">ログインはこちら</a></p>
             </div>
         </main>
     </body>
