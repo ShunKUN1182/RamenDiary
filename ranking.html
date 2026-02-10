@@ -21,29 +21,32 @@
         />
         <link rel="stylesheet" href="css/ress.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/graph.css" />
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script type="module" src="js/graph.js"></script>
+        <link rel="stylesheet" href="css/ranking.css" />
     </head>
     <body>
         <header>
             <h1><img src="images/logo.jpg" alt="RamenDiary" /></h1>
         </header>
+        <div class="headWrap">
+            <h1>合計金額ランキング</h1>
+        </div>
 
-        <main>
-            <div class="total_price">
+        <div class="ranking_Wrap">
+            <div class="ranking_item">
                 <div>
-                    <p>合計金額</p>
-                    <p><a href="ranking.html">ランキングはこちら</a></p>
+                    <img src="images/No1_Icon.png" alt="" />
                 </div>
-                <h2>¥<span id="totalPrice">????</span></h2>
-                <h3><span id="ramenCount">?</span>杯のラーメンを記録</h3>
+                <div class="ranking_item_texts">
+                    <div class="ranking_item_data">
+                        <h2>ラーメン太郎</h2>
+                        <p><span>98</span>杯のラーメンを記録</p>
+                    </div>
+                    <div class="ranking_item_price">
+                        <h3>¥125,400</h3>
+                    </div>
+                </div>
             </div>
-            <div class="graph_wrap">
-                <canvas id="tasteChart"></canvas>
-            </div>
-        </main>
-
+        </div>
         <footer>
             <nav>
                 <ul>
